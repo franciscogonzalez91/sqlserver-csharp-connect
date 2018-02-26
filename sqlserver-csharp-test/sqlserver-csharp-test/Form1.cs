@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SqlServerConnection;
 
 namespace sqlserver_csharp_test
 {
@@ -15,6 +16,12 @@ namespace sqlserver_csharp_test
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            SqlServerConnect connection = new SqlServerConnect();
+            connection.ExecuteQuery("");
         }
     }
 }
